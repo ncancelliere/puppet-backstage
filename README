@@ -1,7 +1,7 @@
 Overview
 
-This module will install Torquebox along with its supplied JRuby. It's been
-tested on Ubuntu 12.04 LTS (Precise).
+This module will install Torquebox Backstage, to monitor Torquebox. 
+Torquebox is required. It's been tested on Ubuntu 12.04 LTS (Precise).
 
 
 Example Use
@@ -9,12 +9,12 @@ Example Use
 Simply include this module in your node, that's it!
 
 node 'my.node.com' {
-  include torquebox
+  include torquebox, backstage
 }
 
-You'll find the installation at /opt/torquebox/current.  It also adds an
-upstart script so you can use 'start torquebox' or 'stop torquebox' to control
-the server. Environment variables are kept in /etc/profile.d/torquebox.sh.
+You'll find the installation at /var/www/apps/backstage.  It also adds a
+a deployment file to JBoss. You can modify the credentials in the deployment
+file, a later feature will allow this to be configurable.
 
 This module does not install any proxies (such as Apache Proxy). If you wish 
 to proxy your web apps you are free to do so, you'll just need to add the 
