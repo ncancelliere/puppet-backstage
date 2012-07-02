@@ -1,0 +1,13 @@
+---
+application:
+  root: /var/www/apps/backstage
+web:
+  context: /backstage
+environment:
+  REQUIRE_AUTHENTICATION: true
+auth:
+  backstage:
+    domain: torquebox-torquebox-backstage
+    credentials:
+      admin: backstage
+...
